@@ -143,6 +143,21 @@ def ejercicio_3c():
 def ejercicio_4():
     ...
 
+#Ejercicio 2. Camino optimo
+def cam_opt(predecesores, origen, destino):
+    camino = []
+    actual = destino
+
+    while actual is not None:
+        camino.append(actual)
+        actual = predecesores[actual]
+
+    camino.reverse()
+    if camino[0] != origen:
+        return None
+
+    return camino
+
 def main():
     #Ejercicio 1
     print("\nEjercicio 1")
@@ -151,6 +166,22 @@ def main():
     print(f"Nodo inicial: 0")
     print(f"Distancias finales (D): {ej1[0]}")
     print(f"Predecesores (P): {ej1[1]}")
+
+    #Ejercicio 2
+    print("\nEjercicio 2")
+    print("\n" + "-"*20)
+    origen =0
+    destino=2
+
+    distancias, predecesores= ej1
+    camino = cam_opt(predecesores, origen, destino)
+
+    if camino:
+        print(f"Camino óptimo de {origen} a {destino}:",
+              " → ".join(map(str, camino)))
+        print("Distancia:", distancias[destino])
+    else:
+        print("No hay camino")
 
     #Ejercicio 3
     print("\nEjercicio 3:")
