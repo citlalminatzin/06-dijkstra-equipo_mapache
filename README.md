@@ -38,18 +38,25 @@ Nota : Donde se encuentre un cero quiere decir que no existe una arista entre di
 
 La matriz de pesos está dada por:
 
-(grafica 1)
+![Gráfica 1](media/grafica1.png)
+*Gráfica 1*
 
 Otra gráfica dirigida:
-(grafica 2)
+
+![Gráfica 2](media/grafica2.png)
+*Gráfica 2*
+
 Otra matriz de pesos está dada por:
-(grafica 3)
+
+![Gráfica 3](media/grafica3.png)
+*Gráfica 3*
 
 ## Ejercicio 4
 Encontrar la distancia mínima para el siguiente ejemplo , y organizar el diagrama para tenerlo en
 Python.
 
-(ejemplo)
+![Ejemplo](media/ejemplo.png)
+*Ejemplo*
 ## Conclusión
 
 ¿Te gustó la programación dinámica? ¿Sientes que te será útil? ¿Se te hace una buena estrategia para la resolución de problemas?
