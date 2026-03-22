@@ -194,10 +194,12 @@ def main():
     print("\nGráfica 2")
     ej3b = ejercicio_3b()
     print(f"Distancias desde el nodo 0: {ej3b[0][0]}")
+    print(f"Predecesores desde el nodo 0: {ej3b[0][1]}")
 
     print("\nGráfica 3")
     ej3c = ejercicio_3c()
     print(f"Distancias desde el nodo 0: {ej3c[0][0]}")
+    print(f"Predecesores desde el nodo 0: {ej3c[0][1]}")
 
 if __name__ == "__main__":
     main()
