@@ -144,7 +144,27 @@ def ejercicio_4():
     ...
 
 def main():
-    ...
+    #Ejercicio 1
+    print("\nEjercicio 1")
+    ej1 = ejercicio_1()
+    print(f"Nodo inicial: 0")
+    print(f"Distancias finales (D): {ej1[0]}")
+    print(f"Predecesores (P): {ej1[1]}")
+
+    #Ejercicio 3
+    print("\nEjercicio 3:")
+    print("\nGráfica 1")
+    ej3a = ejercicio_3a()
+    print(f"Distancias desde el nodo 0: {ej3a[0][0]}")
+    print(f"Predecesores desde el nodo 0: {ej3a[0][1]}")
+
+    print("\nGráfica 2")
+    ej3b = ejercicio_3b()
+    print(f"Distancias desde el nodo 0: {ej3b[0][0]}")
+
+    print("\nGráfica 3")
+    ej3c = ejercicio_3c()
+    print(f"Distancias desde el nodo 0: {ej3c[0][0]}")
 
 if __name__ == "__main__":
     main()
