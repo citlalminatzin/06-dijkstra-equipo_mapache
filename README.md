@@ -6,9 +6,9 @@
 
 ## Integrantes
 
-- (Si no modificas esta línea lloro) Babilonia, Aureliano
-- (Si no modificas esta línea lloro) Buendía, Aureliano
-- (Si no modificas esta línea lloro) Segundo, Aureliano
+- Alba Pérez Paulina
+- Galeana Morán Miguel Ángel
+- Herrera Barrera Joyce
 
 
 ## Uso e instalación
@@ -21,7 +21,35 @@
 
 - `main.py`: Contiene el código para graficar cada uno de los tres ejercicios
 - `data.py`: Tal vez aquí puedes leer el csv para a partir crear una matriz de adyacencia
+## Ejercicio 1
+Programar una función que reciba la matriz de pesos de una gráfica y el nodo inicial y que
+aplique el algoritmo de Dijkstra. La función debe regresar una lista con las distancias de las
+rutas y el origen de la arista con la que terminó la ruta.
 
+## Ejercicio 2
+Usar las listas generadas por la función del algoritmo de Dijkstra, programar
+una función que encuentre el camino óptimo entre dos vértices.
+
+## Ejercicio 3
+Probar las funciones con las siguientes matrices de pesos, empezando siempre en el nodo
+0.
+
+Nota : Donde se encuentre un cero quiere decir que no existe una arista entre dichos vertices.
+
+La matriz de pesos está dada por:
+
+(grafica 1)
+
+Otra gráfica dirigida:
+(grafica 2)
+Otra matriz de pesos está dada por:
+(grafica 3)
+
+## Ejercicio 4
+Encontrar la distancia mínima para el siguiente ejemplo , y organizar el diagrama para tenerlo en
+Python.
+
+(ejemplo)
 ## Conclusión
 
 ¿Te gustó la programación dinámica? ¿Sientes que te será útil? ¿Se te hace una buena estrategia para la resolución de problemas?
