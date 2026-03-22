@@ -146,6 +146,7 @@ def ejercicio_4():
 def main():
     #Ejercicio 1
     print("\nEjercicio 1")
+    print("\n" + "-"*20)
     ej1 = ejercicio_1()
     print(f"Nodo inicial: 0")
     print(f"Distancias finales (D): {ej1[0]}")
@@ -153,6 +154,7 @@ def main():
 
     #Ejercicio 3
     print("\nEjercicio 3:")
+    print("\n" + "-"*20)
     print("\nGráfica 1")
     ej3a = ejercicio_3a()
     print(f"Distancias desde el nodo 0: {ej3a[0][0]}")
