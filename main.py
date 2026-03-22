@@ -19,30 +19,60 @@ def dijkstra(M: list[list[float]], origin: int) -> list[list[float]]:
     lista con las distancia de las rutas y el origen de la arista
     con la que terminó la ruta
     """
+    n= len(M)
     # ---
     # Paso 1: Inicializa las distancias
     # ---
+    distancias = [inf] * n
+    distancias[origin] = 0
+    predecesores = [None] * n
+    permanentes = [False] * n
 
+    for _ in range(n):
+        
     # ---
     # Paso 2: Marca el nodo permanente
-    # ---
-
+    # ---    
+        u = -1
+        menor_distancia = inf
+        for i in range(n):
+            if not permanentes[i] and distancias[i] < menor_distancia:
+                menor_distancia = distancias[i]
+                u = i
+        
+        if u == -1 or distancias[u] == inf:
+            break
+            
+        permanentes[u] = True
+   
     # ---
     # Paso 3: Identifica los nodos vecinos disponibles
     # ---
-
+        for v in range(n):
+           
+            if M[u][v] > 0 and not permanentes[v]:
+                distancia_temporal = distancias[u] + M[u][v]
+    
     # ---
     # Paso 4: Reetiquetado
     # ---
+                if distancia_temporal < distancias[v]:
+                    distancias[v] = distancia_temporal
+                    predecesores[v] = u
 
     # ---
     # Paso 5: Actualizar el nodo permanente
     # ---
-    ...
+    """Cuando el for se reinicia, este paso sucede."""
+
+    return [distancias, predecesores]
 
 def minimal_distance(M: list[list[float]], origin:int, destination:int)-> float:
     """Devuelve la distancia mínima entre el origin y destination"""
-    ...
+
+    resultados = dijkstra(M, origin)
+    distancias = resultados[0]
+    return distancias[destination]
 
 def ejercicio_1():
     """
