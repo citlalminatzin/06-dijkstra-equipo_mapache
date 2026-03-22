@@ -64,7 +64,7 @@ def dijkstra(M: list[list[float]], origin: int) -> list[list[float]]:
     # Paso 5: Actualizar el nodo permanente
     # ---
     """Cuando el for se reinicia, este paso sucede."""
-
+    distancias = [float(x) for x in distancias]
     return [distancias, predecesores]
 
 def minimal_distance(M: list[list[float]], origin:int, destination:int)-> float:
