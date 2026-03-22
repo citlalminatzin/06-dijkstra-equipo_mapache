@@ -13,7 +13,7 @@
 
 ## Uso e instalación
 
-(Si no eliminas esta línea lloro) Aquí escribe qué necesitas que instale para ejecutar tu código, por ejemplo:
+Para ejecutar el codigo es necesario instalar a través de la terminal:
 
 - `matplotlib`
 
