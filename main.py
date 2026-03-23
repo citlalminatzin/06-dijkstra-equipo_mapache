@@ -47,7 +47,8 @@ def main():
     # Ejercicio 4
     print("\nEjercicio 4")
     print("\n" + "-"*20)
-    distancias, predecesores = dijkstra.ejercicio_4()
+    M4 = data.grafica_4()
+    distancias, predecesores = dijkstra.dijkstra(M4, 0)
     print("Distancias desde el nodo 0:")
     print(distancias)
     print("\nPredecesores:")
