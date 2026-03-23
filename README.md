@@ -34,8 +34,7 @@ Usar las listas generadas por la función del algoritmo de Dijkstra, programar
 una función que encuentre el camino óptimo entre dos vértices.
 
 ## Ejercicio 3
-Probar las funciones con las siguientes matrices de pesos, empezando siempre en el nodo
-0.
+Probar las funciones con las siguientes matrices de pesos, empezando siempre en el nodo 0.
 
 Nota : Donde se encuentre un cero quiere decir que no existe una arista entre dichos vertices.
 
