@@ -7,34 +7,6 @@ def read_data(path="data/distances.csv"):
     # Por ahora, como estamos trabajando con matrices de la práctica:
     return np.genfromtxt(path, delimiter=',')
 
-def grafica_4():
-    """Matriz de pesos. Gráfica 4"""
-    n=12
-    M4 = np.zeros((n,n))
-    M4[0,1] = 9
-    M4[0,2] = 7
-    M4[0,3] = 3
-    M4[0,4] = 2
-    M4[1,5] = 4
-    M4[1,6] = 2
-    M4[3,5] = 2
-    M4[2,6] = 3
-    M4[3,7] = 11
-    M4[4,6] = 11
-    M4[4,7] = 8
-    M4[5,8] = 6
-    M4[5,9] = 4 
-    M4[6,8] = 4
-    M4[6,9] = 3
-    M4[7,9] = 5
-    M4[7,10] = 6
-    M4[8,11] = 4
-    M4[9,11] = 6
-    M4[10,11] = 6
-
-    return M4
-
-
 def grafica_1():
     n = 4
     MD = np.zeros((n, n))
@@ -77,5 +49,33 @@ def grafica_3():
     M3[2,3] = 6
     
     return M3
+
+def grafica_4():
+    """Matriz de pesos. Gráfica 4"""
+    n=12
+    M4 = np.zeros((n,n))
+    M4[0,1] = 9
+    M4[0,2] = 7
+    M4[0,3] = 3
+    M4[0,4] = 2
+    M4[1,5] = 4
+    M4[1,6] = 2
+    M4[1,7] = 1
+    M4[2,5] = 2
+    M4[2,6] = 7
+    M4[3,7] = 11
+    M4[4,6] = 11
+    M4[4,7] = 8
+    M4[5,8] = 6
+    M4[5,9] = 4 
+    M4[6,8] = 4
+    M4[6,9] = 3
+    M4[7,9] = 5
+    M4[7,10] = 6
+    M4[8,11] = 4
+    M4[9,11] = 6
+    M4[10,11] = 6
+
+    return M4
     
 
