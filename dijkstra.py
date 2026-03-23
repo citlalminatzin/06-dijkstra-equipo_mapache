@@ -94,7 +94,7 @@ def ejercicio_1():
     Regresa las distancias mínimas del
     primer vértice a todos los demás
     """
-    MD = grafica_1()
+    MD = data.grafica_1()
     n = len(MD)
     return dijkstra(MD, 0)
 
@@ -103,7 +103,7 @@ def ejercicio_3a():
     Regresa las distancias mínimas de todos
     los vértices de la grafica 1 entre sí
     """
-    M1 = grafica_1() 
+    M1 = data.grafica_1() 
     n = len(M1)
     distancias = [dijkstra(M1, i) for i in range(n)]
     return distancias
@@ -113,7 +113,7 @@ def ejercicio_3b():
     Regresa las distancias mínimas de todos
     los vértices de la grafica 2 entre sí
     """
-    M2 = grafica_2()
+    M2 = data.grafica_2()
     n = len(M2)
     distancias = [dijkstra(M2, i) for i in range(n)]
     return distancias
@@ -123,11 +123,11 @@ def ejercicio_3c():
     Regresa las distancias mínimas de todos
     los vértices de la grafica 3 entre sí
     """
-    M3 = grafica_3()
+    M3 = data.grafica_3()
     n = len(M3)
     return [dijkstra(M3, i) for i in range(n)]
 
 def ejercicio_4():
-    M4 = grafica_4()
+    M4 = data.grafica_4()
     n = len(M4)
     return [minimal_distance(M4,0,11)]
