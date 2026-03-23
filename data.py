@@ -37,7 +37,7 @@ def grafica_4():
 
 def grafica_1():
     n = 4
-    MD = zeros((n, n))
+    MD = np.zeros((n, n))
     MD[0,1] = 9
     MD[3,2] = 2
     MD[0,3] = 6
@@ -48,7 +48,7 @@ def grafica_1():
 
 def grafica_2():
     n = 8
-    M1 = zeros((n,n))
+    M1 = np.zeros((n,n))
 
     M1[0,1] = M1[1,0] = 3
     M1[1,2] = M1[2,1] = 1
@@ -67,7 +67,7 @@ def grafica_2():
 
 def grafica_3():
     n = 4
-    M3 = zeros((n,n))
+    M3 = np.zeros((n,n))
 
     M3[0,1] = 4
     M3[0,2] = 8
