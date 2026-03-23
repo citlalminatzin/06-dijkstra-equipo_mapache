@@ -67,5 +67,5 @@ def main():
     else:
         print("No hay camino")
 
-    if __name__ == "__main__":
+if __name__ == "__main__":
         main()
