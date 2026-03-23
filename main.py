@@ -44,10 +44,28 @@ def main():
     print(f"Distancias desde el nodo 0: {ej3c[0][0]}")
     print(f"Predecesores desde el nodo 0: {ej3c[0][1]}")
 
-    #Ejercicio 4
-    print("Ejercicio 4 ")
-    print(f"Distancia mínima  {dijkstra.ejercicio_4()}")
+# Ejercicio 4
+print("\nEjercicio 4")
+print("\n" + "-"*20)
+distancias, predecesores = dijkstra.ejercicio_4()
+print("Distancias desde el nodo 0:")
+print(distancias)
+print("\nPredecesores:")
+print(predecesores)
 
+origen = 0     
+destino = 11   
 
+camino = dijkstra.cam_opt(predecesores, origen, destino)
+
+if camino:
+    camino_visual = [n + 1 for n in camino]
+
+    print(f"\n Camino con la distancia mínima de 1 a 12:",
+          " → ".join(map(str, camino_visual)))
+    print("Distancia:", distancias[destino])
+else:
+    print("No hay camino")
+    
 if __name__ == "__main__":
     main()

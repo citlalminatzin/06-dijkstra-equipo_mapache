@@ -128,6 +128,9 @@ def ejercicio_3c():
     return [dijkstra(M3, i) for i in range(n)]
 
 def ejercicio_4():
+ 
     M4 = data.grafica_4()
-    n = len(M4)
-    return [dijkstra(M4, i) for i in range(n)]
+    origen = 0  
+    distancias, predecesores = dijkstra(M4, origen)
+
+    return distancias, predecesores
