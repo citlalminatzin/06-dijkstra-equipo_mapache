@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+import dijkstra
+import data
 def main():
     #Ejercicio 1
     print("\nEjercicio 1")
