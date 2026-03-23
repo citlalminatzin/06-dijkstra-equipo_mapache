@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+from dijkstra import ejercicio_1, ejercicio_3a, ejercicio_3b, ejercicio_3c, ejercicio_4, cam_opt
+
 def main():
     #Ejercicio 1
     print("\nEjercicio 1")
@@ -49,3 +51,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

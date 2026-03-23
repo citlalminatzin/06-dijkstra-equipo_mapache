@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np 
 from math import inf
+from data import grafica_1, grafica_2, grafica_3, grafica_4
 
 def create_adjacency_matrix()->list[list[float]]:
     """
