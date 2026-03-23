@@ -77,5 +77,3 @@ def grafica_3():
     M3[2,3] = 6
     
     return M3
-    
-
