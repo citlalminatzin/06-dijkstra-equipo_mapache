@@ -16,11 +16,14 @@
 Para ejecutar el codigo es necesario instalar a través de la terminal:
 
 - `matplotlib`
+- `import numpy as np` 
+- `from math import inf`
 
-(Si no eliminas esta línea lloro) Y dime cómo debería ejecutar tu código y en qué orden. Recuerda que antes de ejecutar tu código leeré tu `README.md`. Por ejemplo la manera en la que propongo que organizes tu código es
+Ejecutar el codigo de la siguiente manera:
+- `data.py`: Contiene todas las funciones creadoras de matrices.
+- `dijkstra.py`: Contiene algoritmo de dijkstra y lo necesario para la solución a cada ejercicio.
+- `main.py`: Contiene el código para ejecutar cada uno de los 4 ejercicios.
 
-- `main.py`: Contiene el código para graficar cada uno de los tres ejercicios
-- `data.py`: Tal vez aquí puedes leer el csv para a partir crear una matriz de adyacencia
 ## Ejercicio 1
 Programar una función que reciba la matriz de pesos de una gráfica y el nodo inicial y que
 aplique el algoritmo de Dijkstra. La función debe regresar una lista con las distancias de las
