@@ -130,4 +130,4 @@ def ejercicio_3c():
 def ejercicio_4():
     M4 = data.grafica_4()
     n = len(M4)
-    return [minimal_distance(M4,0,11)]
+    return [dijkstra(M4, i) for i in range(n)]
