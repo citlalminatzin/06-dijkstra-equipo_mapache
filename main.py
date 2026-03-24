@@ -69,9 +69,5 @@ def main():
         print("No hay camino")
 
 if __name__ == "__main__":
-<<<<<<< HEAD
     main()
 
-=======
-        main()
->>>>>>> 9b633bb2912d16b3d165ca010362b288cd5119d1

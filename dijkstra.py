@@ -1,27 +1,20 @@
+#Cargamos las librerias e importamos datos y funciones p.e. de data.py
 import matplotlib.pyplot as plt
 import numpy as np 
 from math import inf
-<<<<<<< HEAD
-from data import grafica_1, grafica_2, grafica_3, grafica_4
-=======
 import data
->>>>>>> 9b633bb2912d16b3d165ca010362b288cd5119d1
 
 def create_adjacency_matrix()->list[list[float]]:
-    """
-    Crea una matriz de adyacencia
-    """
+#Función que crea nuestra matriz de adyacencia
     ...
 
 def dijkstra(M: list[list[float]], origin: int) -> list[list[float]]:
-    """
-    M : Matriz de pesos de una gráfica
-    origin: índice del nodo inicial
-
-    returns
-    lista con las distancia de las rutas y el origen de la arista
-    con la que terminó la ruta
-    """
+#Definimos nuestro algoritmo dijkstra   
+#donde M : Matriz de pesos de una gráfica
+#y origin: índice del nodo inicial
+#regresa una #lista con las distancia de las rutas y el origen de la arista
+#con la que terminó la ruta
+    
     n= len(M)
     # ---
     # Paso 1: Inicializa las distancias
@@ -66,19 +59,19 @@ def dijkstra(M: list[list[float]], origin: int) -> list[list[float]]:
     # ---
     # Paso 5: Actualizar el nodo permanente
     # ---
-    """Cuando el for se reinicia, este paso sucede."""
+    #esto se ejecuta cuando se detiene el for, y escoje nuevo nodo permanente
     distancias = [float(x) for x in distancias]
     return [distancias, predecesores]
 
-#Funcion para la distancia mínima 
+#Funcion que regresa la distancia mínima entre el orígen y el destino 
 def minimal_distance(M: list[list[float]], origin:int, destination:int)-> float:
-    """Devuelve la distancia mínima entre el origen y destino"""
+ 
 
     resultados = dijkstra(M, origin)
     distancias = resultados[0]
     return distancias[destination]
 
-#Función:Camino optimo
+#Función del camino óptimo a recorrer
 def cam_opt(predecesores, origen, destino):
     camino = []
     actual = destino
@@ -94,53 +87,48 @@ def cam_opt(predecesores, origen, destino):
     return camino
 
 def ejercicio_1():
-    """
-    Regresa las distancias mínimas del
-    primer vértice a todos los demás
-    """
+#Regresa las distancias mínimas del
+#primer vértice a todos los demás
+
     MD = data.grafica_1()
     n = len(MD)
     return dijkstra(MD, 0)
 
 def ejercicio_3a():
-    """
-    Regresa las distancias mínimas de todos
-    los vértices de la grafica 1 entre sí
-    """
+#Regresa las distancias mínimas de todos
+#los vértices de la grafica 1 entre sí
+    
     M1 = data.grafica_1() 
     n = len(M1)
     distancias = [dijkstra(M1, i) for i in range(n)]
     return distancias
 
 def ejercicio_3b():
-    """
-    Regresa las distancias mínimas de todos
-    los vértices de la grafica 2 entre sí
-    """
+#Regresa las distancias mínimas de todos
+#los vértices de la grafica 2 entre sí
+
     M2 = data.grafica_2()
     n = len(M2)
     distancias = [dijkstra(M2, i) for i in range(n)]
     return distancias
     
 def ejercicio_3c():
-    """
-    Regresa las distancias mínimas de todos
-    los vértices de la grafica 3 entre sí
-    """
+#Regresa las distancias mínimas de todos
+#los vértices de la grafica 3 entre sí
+
     M3 = data.grafica_3()
     n = len(M3)
     return [dijkstra(M3, i) for i in range(n)]
 
 def ejercicio_4():
-<<<<<<< HEAD
+#función para las distancias mínimas del ejercicio 4
     M4 = grafica_4()
     n = len(M4)
     return [minimal_distance(M4,0,11)]
-=======
+
  
     M4 = data.grafica_4()
     origen = 0  
     distancias, predecesores = dijkstra(M4, origen)
 
     return distancias, predecesores
->>>>>>> 9b633bb2912d16b3d165ca010362b288cd5119d1

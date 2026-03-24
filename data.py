@@ -3,8 +3,9 @@
 import numpy as np
 
 def read_data(path="data/distances.csv"):
-    """Lee los datos de un csv y te los devuelve"""
-    # Por ahora, como estamos trabajando con matrices de la práctica:
+#Lee los datos de las distancias  de cada matriz
+#Por ahora, como estamos trabajando con las matrices 
+#sugeridas en la práctica:
     return np.genfromtxt(path, delimiter=',')
 
 def grafica_1():
@@ -47,14 +48,13 @@ def grafica_3():
     M3[1,2] = 5
     M3[1,3] = 11
     M3[2,3] = 6
-    
-<<<<<<< HEAD
+
     return M3
-=======
+
     return M3
 
 def grafica_4():
-    """Matriz de pesos. Gráfica 4"""
+#Matriz de pesos
     n=12
     M4 = np.zeros((n,n))
     M4[0,1] = 9
@@ -80,6 +80,3 @@ def grafica_4():
     M4[10,11] = 6
 
     return M4
-    
-
->>>>>>> 9b633bb2912d16b3d165ca010362b288cd5119d1

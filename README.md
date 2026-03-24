@@ -5,23 +5,20 @@
 `data/distances.csv` contiene la lista de adyacencias de la gráfica dirigida del ejercicio 4.
 
 ## Integrantes
-
 - Alba Pérez Paulina
 - Galeana Morán Miguel Ángel
 - Herrera Barrera Joyce
 
 
 ## Uso e instalación
-
 Para ejecutar el codigo es necesario instalar a través de la terminal:
-
 - `matplotlib`
 - `import numpy as np` 
 - `from math import inf`
 
 Ejecutar el codigo de la siguiente manera:
 - `data.py`: Contiene todas las funciones creadoras de matrices.
-- `dijkstra.py`: Contiene algoritmo de dijkstra y lo necesario para la solución a cada ejercicio.
+- `dijkstra.py`: Contiene la función-algoritmo de dijkstra y lo necesario para la solución a cada ejercicio.
 - `main.py`: Contiene el código para ejecutar cada uno de los 4 ejercicios.
 
 ## Ejercicio 1
@@ -35,21 +32,17 @@ una función que encuentre el camino óptimo entre dos vértices.
 
 ## Ejercicio 3
 Probar las funciones con las siguientes matrices de pesos, empezando siempre en el nodo 0.
-
 Nota : Donde se encuentre un cero quiere decir que no existe una arista entre dichos vertices.
 
 La matriz de pesos está dada por:
-
 ![Gráfica 1](media/grafica1.png)
 *Gráfica 1*
 
 Otra gráfica dirigida:
-
 ![Gráfica 2](media/grafica2.png)
 *Gráfica 2*
 
 Otra matriz de pesos está dada por:
-
 ![Gráfica 3](media/grafica3.png)
 *Gráfica 3*
 
@@ -59,6 +52,11 @@ Python.
 
 ![Ejemplo](media/ejemplo.png)
 *Ejemplo*
-## Conclusión
 
+
+## Conclusión
 ¿Te gustó la programación dinámica? ¿Sientes que te será útil? ¿Se te hace una buena estrategia para la resolución de problemas?
+
+## Respuesta: 
+El uso de programación dinámica nos permite atacar un problema dividiendolo en n partes, resolviendo uno a la vez, digamos
+en problemas más sencillos de analizar, con la finalidad de, en este caso, encontrar la ruta más corta dada una gráfica con nodos y pesos y buscar el camino más óptimo entre un inicio y un nodo final. Las recurrencias en este caso son que cada vez que nuestro código se ejecuta y evalua cada opción de ruta, regresa dependiendo si cumple con las condiciones requeridas, y así n veces hasta encontrar un camino que satisfaga en efecto el principio de distancias mínimas. Entender este tipo de programación no es solo útil, sino que es uno de los algoritmos más utilizados en muchos ámbitos, no solo en matemáticas, sino en problemas 'cotidianos' p.e. rutas de transporte de aplicación.
