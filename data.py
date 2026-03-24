@@ -1,19 +1,82 @@
 #!/usr/bin/env python
 
-from yfinance import Ticker
+import numpy as np
 
-def get_stock_data(ticker:str = "^GSPC", years: int = 5, path:str = "data/sp500.csv"):
-    """Gets historic data for a ticker from yfinance API"""
-    t = str(years) + "y"
-    stock = Ticker(ticker).history(period = t)
-    stock.to_csv(path, encoding = 'utf-8')
+def read_data(path="data/distances.csv"):
+#Lee los datos de las distancias  de cada matriz
+#Por ahora, como estamos trabajando con las matrices 
+#sugeridas en la práctica:
+    return np.genfromtxt(path, delimiter=',')
 
-def read_data(path="data/pescados.csv"):
-    """Lee los datos de un csv y te los devuelve"""
-    ...
+def grafica_1():
+    n = 4
+    MD = np.zeros((n, n))
+    MD[0,1] = 9
+    MD[3,2] = 2
+    MD[0,3] = 6
+    MD[1,3] = 1
+    MD[2,1] = 3
 
-def main():
-    get_stock_data()
+    return MD
 
-if __name__ == "__main__":
-    main()
+def grafica_2():
+    n = 8
+    M1 = np.zeros((n,n))
+
+    M1[0,1] = M1[1,0] = 3
+    M1[1,2] = M1[2,1] = 1
+    M1[0,3] = M1[3,0] = 2
+    M1[3,2] = M1[2,3] = 3
+    M1[1,4] = M1[4,1] = 4
+    M1[2,5] = M1[5,2] = 2
+    M1[2,6] = M1[6,2] = 2
+    M1[3,6] = M1[6,3] = 4
+    M1[4,7] = M1[7,4] = 6
+    M1[5,7] = M1[7,5] = 4
+    M1[5,6] = M1[6,5] = 3
+    M1[6,7] = M1[7,6] = 5
+
+    return M1
+
+def grafica_3():
+    n = 4
+    M3 = np.zeros((n,n))
+
+    M3[0,1] = 4
+    M3[0,2] = 8
+    M3[0,3] = 16
+    M3[1,2] = 5
+    M3[1,3] = 11
+    M3[2,3] = 6
+
+    return M3
+
+    return M3
+
+def grafica_4():
+#Matriz de pesos
+    n=12
+    M4 = np.zeros((n,n))
+    M4[0,1] = 9
+    M4[0,2] = 7
+    M4[0,3] = 3
+    M4[0,4] = 2
+    M4[1,5] = 4
+    M4[1,6] = 2
+    M4[1,7] = 1
+    M4[2,5] = 2
+    M4[2,6] = 7
+    M4[3,7] = 11
+    M4[4,6] = 11
+    M4[4,7] = 8
+    M4[5,8] = 6
+    M4[5,9] = 4 
+    M4[6,8] = 4
+    M4[6,9] = 3
+    M4[7,9] = 5
+    M4[7,10] = 6
+    M4[8,11] = 4
+    M4[9,11] = 6
+    M4[10,11] = 6
+
+    return M4

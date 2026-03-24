@@ -1,120 +1,73 @@
 #!/usr/bin/env python
-
-import matplotlib.pyplot as plt
-from numpy import zeros
-from math import inf
-
-def create_adjacency_matrix()->list[list[float]]:
-    """
-    Crea una matriz de adyacencia
-    """
-    ...
-
-def dijkstra(M: list[list[float]], origin: int) -> list[list[float]]:
-    """
-    M : Matriz de pesos de una gráfica
-    origin: índice del nodo inicial
-
-    returns
-    lista con las distancia de las rutas y el origen de la arista
-    con la que terminó la ruta
-    """
-    # ---
-    # Paso 1: Inicializa las distancias
-    # ---
-
-    # ---
-    # Paso 2: Marca el nodo permanente
-    # ---
-
-    # ---
-    # Paso 3: Identifica los nodos vecinos disponibles
-    # ---
-
-    # ---
-    # Paso 4: Reetiquetado
-    # ---
-
-    # ---
-    # Paso 5: Actualizar el nodo permanente
-    # ---
-    ...
-
-def minimal_distance(M: list[list[float]], origin:int, destination:int)-> float:
-    """Devuelve la distancia mínima entre el origin y destination"""
-    ...
-
-def ejercicio_1():
-    """
-    Regresa las distancias mínimas del
-    primer vértice a todos los demás
-    """
-    n = 4
-    MD = zeros((n, n))
-    MD[0,1] = 9
-    MD[3,2] = 2
-    MD[0,3] = 6
-    MD[1,3] = 1
-    MD[2,1] = 3
-    
-    return dijkstra(MD, 0)
-
-def ejercicio_3a():
-    """
-    Regresa las distancias mínimas de todos
-    los vértices entre sí
-    """
-    n = 8
-    M1 = zeros((n,n))
-
-    M1[0,1] = M1[1,0] = 3
-    M1[1,2] = M1[2,1] = 1
-    M1[0,3] = M1[3,0] = 2
-    M1[3,2] = M1[2,3] = 3
-    M1[1,4] = M1[4,1] = 4
-    M1[2,5] = M1[5,2] = 2
-    M1[2,6] = M1[6,2] = 2
-    M1[3,6] = M1[6,3] = 4
-    M1[4,7] = M1[7,4] = 6
-    M1[5,7] = M1[7,5] = 4
-    M1[5,6] = M1[6,5] = 3
-    M1[6,7] = M1[7,6] = 5
-    
-    distancias = [dijkstra(M1, i) for i in range(n)]
-    return distancias
-
-def ejercicio_3b():
-    n = 4
-    M2 = zeros((n,n))
-
-    M2[0,1] = 9
-    M2[3,2] = 2
-    M2[0,3] = 6
-    M2[1,3] = 1
-    M2[2,1] = 3
-
-    distancias = [dijkstra(M2, i) for i in range(n)]
-    return distancias
-    
-def ejercicio_3c():
-    n = 4
-    M3 = zeros((n,n))
-
-    M3[0,1] = 4
-    M3[0,2] = 8
-    M3[0,3] = 16
-    M3[1,2] = 5
-    M3[1,3] = 11
-    M3[2,3] = 6
-
-    distancias = [dijkstra(M3, i) for i in range(n)]
-    return distancias
-
-def ejercicio_4():
-    ...
-
+import dijkstra
+import data
 def main():
-    ...
+    #Ejercicio 1
+    print("\nEjercicio 1")
+    print("\n" + "-"*20)
+    ej1 = dijkstra.ejercicio_1()
+    print(f"Nodo inicial: 0")
+    print(f"Distancias finales (D): {ej1[0]}")
+    print(f"Predecesores (P): {ej1[1]}")
+
+    #Ejercicio 2
+    print("\nEjercicio 2")
+    print("\n" + "-"*20)
+    origen =0
+    destino=2
+
+    distancias, predecesores= ej1
+    camino = dijkstra.cam_opt(predecesores, origen, destino)
+
+    if camino:
+        print(f"Camino óptimo de {origen} a {destino}:",
+              " → ".join(map(str, camino)))
+        print("Distancia:", distancias[destino])
+    else:
+        print("No hay camino")
+
+    #Ejercicio 3
+    print("\nEjercicio 3:")
+    print("\n" + "-"*20)
+    print("\nGráfica 1")
+    ej3a = dijkstra.ejercicio_3a()
+    print(f"Distancias desde el nodo 0: {ej3a[0][0]}")
+    print(f"Predecesores desde el nodo 0: {ej3a[0][1]}")
+
+    print("\nGráfica 2")
+    ej3b = dijkstra.ejercicio_3b()
+    print(f"Distancias desde el nodo 0: {ej3b[0][0]}")
+    print(f"Predecesores desde el nodo 0: {ej3b[0][1]}")
+
+    print("\nGráfica 3")
+    ej3c = dijkstra.ejercicio_3c()
+    print(f"Distancias desde el nodo 0: {ej3c[0][0]}")
+    print(f"Predecesores desde el nodo 0: {ej3c[0][1]}")
+    
+    # Ejercicio 4
+    print("\nEjercicio 4")
+    print("\n" + "-"*20)
+    M4 = data.grafica_4()
+    distancias, predecesores = dijkstra.dijkstra(M4, 0)
+    print("Distancias desde el nodo 0:")
+    print(distancias)
+    print("\nPredecesores:")
+    print(predecesores)
+
+    origen = 0     
+    destino = 11   
+
+    camino = dijkstra.cam_opt(predecesores, origen, destino)
+
+    if camino:
+        camino_visual = [n + 1 for n in camino]
+
+        print(f"\n Camino con la distancia mínima de 1 a 12:",
+            " → ".join(map(str, camino_visual)))
+        print("Distancia:", distancias[destino])
+    else:
+        print("No hay camino")
 
 if __name__ == "__main__":
     main()
+
