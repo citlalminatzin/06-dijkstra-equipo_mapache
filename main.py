@@ -1,11 +1,6 @@
 #!/usr/bin/env python
-<<<<<<< HEAD
-from dijkstra import ejercicio_1, ejercicio_3a, ejercicio_3b, ejercicio_3c, ejercicio_4, cam_opt
-
-=======
 import dijkstra
 import data
->>>>>>> 9b633bb2912d16b3d165ca010362b288cd5119d1
 def main():
     #Ejercicio 1
     print("\nEjercicio 1")
